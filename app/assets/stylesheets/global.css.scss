@@ -1,84 +1,84 @@
-html {
-		/* background: asset_url("veg.jpg") no-repeat center center fixed; */
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-}
-
 body {
-	padding-top: 70px;
-	font-size: 16px;
-	font-family: "Open Sans",serif;
-	background: transparent;
+ padding-top:40px;
+}
+.hero-spacer {
+	margin-top: 50px;
 }
 
-
-h1 {
-	font-family: "Abel", Arial, sans-serif;
-	font-weight: 400;
-	font-size: 40px;
-}
-
-/* Override B3 .panel adding a subtly transparent background */
-.panel {
-	background-color: rgba(255, 255, 255, 0.9);
-}
-
-.margin-base-vertical {
-	margin: 40px 0;
-}
-
-.slide-image {
-  width: 100%;
-}
-
-.carousel-holder {
-  margin-bottom: 30px;
-}
-
-.carousel-control,.item {
-  border-radius: 4px;
-}
-
-.caption {
-  height: 130px;
-  overflow: hidden;
-}
-
-.caption h4 {
-  white-space: nowrap;
-}
-
-.thumbnail img {
-  width: 100%;
-}
-
-.ratings {
-  color: #d17581;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.thumbnail {
-  padding: 0;
-}
-
-.thumbnail .caption-full {
-  padding: 9px;
-  color: #333;
+.hero-feature {
+	margin-bottom: 30px;/* spaces out the feature boxes once they start to stack responsively */
 }
 
 footer {
-  margin: 50px 0;
+	margin: 50px 0;
 }
+nav {
+	padding-left: 50px;
+padding-right: 50px;
+}
+
+#masthead { 
+ min-height:250px;
+}
+
+#masthead h1 {
+ font-size: 30px;
+ line-height: 1;
+ padding-top:20px;
+}
+
+#masthead .well {
+ margin-top:8%;
+}
+
+@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 50px;
+  }
+}
+
+.navbar-bright {
+ background-color:#111155;
+ color:#fff;
+}
+
+.affix-top,.affix{
+ position: static;
+}
+
 .navbar-inverse {
-background-color: #4cae4c;
-border-color: #4cae4c;
+background-color: #2F4F2F;
+border-color: #2F4F2F;
+}
+.navbar-inverse .navbar-brand {
+color: #ffffff;
 }
 .navbar-inverse .navbar-nav>li>a {
 color: #ffffff;
 }
-.navbar-inverse .navbar-brand {
-color: #ffffff;
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    width:270px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:270px;
+  }
+}
+
+#sidebar li.active {
+  border:0 #eee solid;
+  border-right-width:5px;
+}
+.breadcrumb {
+padding: 8px 15px;
+margin-bottom: 20px;
+list-style: none;
+background-color: #d6e9c6;
+border-radius: 4px;
+color: #3c763d;
 }
