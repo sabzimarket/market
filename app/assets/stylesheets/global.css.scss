@@ -1,8 +1,11 @@
-body {
- padding-top:40px;
+body {	
+ background-color: #F0FFF0; 
+
 }
 .hero-spacer {
-	margin-top: 50px;
+	margin-top: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .hero-feature {
@@ -14,7 +17,7 @@ footer {
 }
 nav {
 	padding-left: 50px;
-padding-right: 50px;
+	padding-right: 50px;
 }
 
 #masthead { 
@@ -46,9 +49,19 @@ padding-right: 50px;
  position: static;
 }
 
+header.navbar-inverse {
+background-color: #F0FFF0;
+border-color: #F0FFF0;
+	
+}
+header.navbar {
+position: relative;
+min-height: 80px;
+margin-bottom: 0;
+}
 .navbar-inverse {
-background-color: #2F4F2F;
-border-color: #2F4F2F;
+background-color: #36648B;
+border-color: #36648B;
 }
 .navbar-inverse .navbar-brand {
 color: #ffffff;
@@ -65,7 +78,7 @@ color: #ffffff;
   
   #sidebar.affix {
     position: fixed;
-    top:70px;
+    top:0px;
     width:270px;
   }
 }
@@ -74,11 +87,61 @@ color: #ffffff;
   border:0 #eee solid;
   border-right-width:5px;
 }
+
+@media (min-width: 979px) {
+  #fix_nav.affix-top {
+    position: static;
+    width: 850px;
+  }
+  
+  #fix_nav.affix {
+    position: fixed;
+    top:0px;
+    width: 850px;
+  }
+}
+
+#fix_nav li.active {
+  border:0 #eee solid;
+  border-right-width:5px;
+}
 .breadcrumb {
 padding: 8px 15px;
 margin-bottom: 20px;
 list-style: none;
-background-color: #d6e9c6;
+background-color: #36648B;
 border-radius: 4px;
-color: #3c763d;
+color: #ffffff;
+}
+.panel-default>.panel-heading {
+color: #333;
+background-color: #F5D769;
+border-color: #F5D769;
+}
+
+
+.slide-image {
+  width: 100%;
+}
+
+.carousel-holder {
+  margin-bottom: 30px;
+}
+
+.carousel-control,.item {
+  border-radius: 4px;
+}
+
+
+
+
+.ratings {
+  color: #36648B;
+}
+
+
+
+
+footer {
+  margin: 50px 0;
 }
