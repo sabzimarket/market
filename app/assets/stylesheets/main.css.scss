@@ -572,6 +572,9 @@ ul.sub-menu {
 #slider {
   padding-bottom: 45px;
 }
+.carousel-indicators {
+bottom: 0px;
+}
 
 .carousel-indicators li {
   background: #C4C4BE;
@@ -599,8 +602,11 @@ ul.sub-menu {
 .item h1 {
   color: #B4B1AB;
   font-family: abel;
-  font-size: 48px;
-  margin-top: 115px;
+  /*font-size: 48px;*/
+  font-size: 24px;
+
+  /*margin-top: 115px;*/
+  margin-top: 40px;
 }
 
 .item h1 span {
@@ -610,7 +616,9 @@ ul.sub-menu {
 .item h2 {
   color: #363432;
   font-family: 'Roboto', sans-serif;
-  font-size: 28px;
+  /*font-size: 28px;*/
+  font-size: 16px;
+
   font-weight: 700;
   margin-bottom: 22px;
   margin-top: 10px;
@@ -618,7 +626,7 @@ ul.sub-menu {
 
 .item  p {
 	color:#363432;
-	font-size:16px;
+	font-size:14px;
 	font-weight:300;
 	font-family: 'Roboto', sans-serif;
 }
@@ -865,8 +873,16 @@ h2.title {
 .productinfo h2{
 	color: #FE980F;
 	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 700;
+}
+.productinfo .head_name{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #FE980F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 .product-overlay h2{
 	color: #fff;
@@ -889,7 +905,10 @@ h2.title {
 
 .productinfo{
  position:relative;
+ padding-left: 5px;
+ padding-right: 5px;
 }
+
 
 .product-overlay {
   background:#FE980F;
@@ -2534,6 +2553,7 @@ background-color: #F2E400;
 text-decoration: none;
 background-color: #F2E400;
 }
+
 
 
 
