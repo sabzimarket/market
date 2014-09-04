@@ -33,7 +33,7 @@ group :doc do
 end
 
 group :development do
-	gem 'mysql2'
+	gem 'sqlite3', '1.3.8'
 end
 
 group :production do
