@@ -195,35 +195,37 @@
 
             <div class="tab-content">
                 <div class="tab-pane fade active in" id="tshirt" >
-                    <div class="col-sm-3">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo ">
-                                    <%= image_tag "vegetables3.jpg", :alt=>""%>
-                                    <div class="head_name">
-                                        <span>Capcicum</h2>
-                                        <span class="pull-right">$100</span>
-                                    </div>
-                                    <p>About Capcicum<p>
+                    <% @products.each do |product|%>
+                        <div class="col-sm-3">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo ">
+                                        <%= image_tag "vegetables3.jpg", :alt=>""%>
+                                        <div class="head_name">
+                                            <span>Capcicum</h2>
+                                            <span class="pull-right">$100</span>
+                                        </div>
+                                        <p>About Capcicum<p>
 
-                                    <p><select class="form-control">
-                                      <option>1 Kg</option>
-                                      <option>2 Kg</option>
-                                      <option>3 Kg</option>
-                                      <option>4 Kg</option>
-                                      <option>5 Kg </option>
-                                    </select></p>
-                                    <div class="cart_quantity_button">
-                                        <a class="cart_quantity_up" href=""> Qty</a>
-                                    <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-                                        <!-- <a class="cart_quantity_down" href=""> - </a> -->
+                                        <p><select class="form-control">
+                                          <option>1 Kg</option>
+                                          <option>2 Kg</option>
+                                          <option>3 Kg</option>
+                                          <option>4 Kg</option>
+                                          <option>5 Kg </option>
+                                        </select></p>
+                                        <div class="cart_quantity_button">
+                                            <a class="cart_quantity_up" href=""> Qty</a>
+                                        <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                            <!-- <a class="cart_quantity_down" href=""> - </a> -->
+                                        </div>
+                                        <a href="#" class="btn btn-default add-to-cart pull-right"><i class="fa fa-shopping-cart"></i>Add</a>
                                     </div>
-                                    <a href="#" class="btn btn-default add-to-cart pull-right"><i class="fa fa-shopping-cart"></i>Add</a>
+                                    
                                 </div>
-                                
                             </div>
                         </div>
-                    </div>
+                    <%end%>
                     <div class="col-sm-3">
                         <div class="product-image-wrapper">
                             <div class="single-products">

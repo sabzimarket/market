@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-lg-12">
+    <%= link_to "Create", new_admin_product_path, :class=>"btn btn-primary pull-right" %>
+    <h1>Products <small>Manage Your products</small></h1>
+    <ol class="breadcrumb">
+      <li><a href="index.html"><i class="fa fa-dashboard"></i> Add item</a></li>
+      <li class="active"><i class="fa fa-table"></i> products</li>
+    </ol>
+    <!-- <div class="alert alert-info alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      Manage yours products..
+    </div> -->
+  </div>
+</div><!-- /.row -->
+<div class="table-responsive">
+  <table class="table table-bordered table-hover table-striped tablesorter">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Title <i class="fa fa-sort"></i></th>
+        <th>Price <i class="fa fa-sort"></i></th>
+        <th>Discount <i class="fa fa-sort"></i></th>
+        <th>Price after Discount <i class="fa fa-sort"></i></th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <td><%= image_tag product.image.url(:thumb) %></td>
+        <td><%= product.title %></td>
+        <td><%= product.price %></td>
+        <td><%= product.discount %></td>
+        <td><%= product.discount %></td>
+        <td><%= link_to 'Show', admin_product_path(product) %>|
+            <%= link_to 'Edit', edit_admin_product_path(product) %>|
+            <%= link_to 'Destroy',[:admin, product], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+      
+      
+
+        
+
+        
+       

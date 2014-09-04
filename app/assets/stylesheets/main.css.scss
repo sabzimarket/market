@@ -33,6 +33,42 @@ a {
     transition: 300ms;
 }
 
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    width:270px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:10px;
+    width:270px;
+  }
+}
+
+#sidebar li.active {
+  border:0 #eee solid;
+  border-right-width:5px;
+}
+
+@media (min-width: 979px) {
+  #fix_nav.affix-top {
+    position: static;
+    width: 850px;
+  }
+  
+  #fix_nav.affix {
+    position: fixed;
+    top:0px;
+    width: 850px;
+  }
+}
+
+#fix_nav li.active {
+  border:0 #eee solid;
+  border-right-width:5px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
@@ -2422,6 +2458,7 @@ h2.title {
   border: 0 none;
   border-radius: 0;
   margin-top: 16px;
+  color:white;
 }
 
 .blank-arrow {

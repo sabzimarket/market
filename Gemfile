@@ -40,6 +40,8 @@ group :production do
 	gem 'pg'
 end
 
+gem "paperclip", "~> 4.2"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
