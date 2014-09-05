@@ -1,11 +1,19 @@
 Market::Application.routes.draw do
+  devise_for :users
   #get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  devise_scope :user do
+    
+   match 'admin', to: 'devise/sessions#new', via: :get
+  end  
   # You can have the root of your site routed with "root"
    root 'home#index'
-
+  # Example resource route within a namespace:
+    namespace :admin do
+      match 'dashboard' => "dashboard#index", via: [:get]
+      resources :products
+    end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -48,9 +56,4 @@ Market::Application.routes.draw do
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
-  # Example resource route within a namespace:
-    namespace :admin do
-      match 'dashboard' => "dashboard#index", via: [:get]
-      resources :products
-    end
 end
