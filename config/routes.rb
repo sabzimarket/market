@@ -1,4 +1,6 @@
 Market::Application.routes.draw do
+  resources :products
+
   devise_for :users
   #get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.

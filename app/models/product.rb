@@ -1,4 +1,15 @@
-class Product < ActiveRecord::Base
-	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-  	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+class Product
+
+  include Mongoid::Document
+  include Mongoid::Alize
+  field :title, type: String
+  field :descirption, type: String
+
+  
+
+  has_many :product_denominations, :dependent => :destroy
+  accepts_nested_attributes_for :product_denominations, :reject_if => lambda { |a| a[:image_url].blank? }, :allow_destroy => true
+  # ***
+  alize :product_denominations # denormalize all fields from posts (the default w/ no fields specified)
+  # ***
 end
