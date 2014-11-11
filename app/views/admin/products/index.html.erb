@@ -16,7 +16,15 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= product.descirption %></td>
-        <td><%= product.product_denominations_fields %></td>
+        <td><% product.product_denominations_fields.each do |l| %>
+            <b>Image Url:</b> <%= l['image_url']%><br/>
+            <b>Price:</b> <%= l['price']%><br/>
+            <b>Denomination:</b> <%= l['denomination']%><br/>
+            <b>Discount:</b> <%= l['discount']%><br/>
+            <hr/>
+            <%end%>
+
+        </td>
         
         <td><%= link_to 'Show', [:admin, product] %></td>
         <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
