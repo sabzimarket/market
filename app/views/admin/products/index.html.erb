@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Descirption</th>
+      <th>description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,7 +15,7 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.title %></td>
-        <td><%= product.descirption %></td>
+        <td><%= product.description %></td>
         <td><% product.product_denominations_fields.each do |l| %>
             <b>Image Url:</b> <%= l['image_url']%><br/>
             <b>Price:</b> <%= l['price']%><br/>

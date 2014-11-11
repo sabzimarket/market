@@ -195,36 +195,38 @@
 
             <div class="tab-content">
                 <div class="tab-pane fade active in" id="tshirt" >
-                    <% @products.each do |product|%>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo ">
-                                    <%= image_tag product.image.url, :alt=>""%>
-                                        <div class="head_name">
-                                            <span><%= product.title.capitalize %></h2>
-                                            <span class="pull-right"><%= product.price %></span>
-                                        </div>
-                                        <p><%= product.desc %><p>
+                    <% if !@products.blank?%>
+                        <% @products.each do |product|%>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo ">
+                                        <%#= image_tag product.image_url, :alt=>""%>
+                                            <div class="head_name">
+                                                <span><%= product.title.capitalize %></h2>
+                                                <span class="pull-right"><%#= product.price %></span>
+                                            </div>
+                                            <p><%= product.description %><p>
+                                            <%= form_tag "#", :method => :get do %>
+                                                <p>
+                                                    <%= collection_select :product_denomination_id, :id, product.product_denominations.all, :id,  :calculated_denomination  , {}, {:class=>'form-control'}%>
 
-                                        <p><select class="form-control">
-                                          <option>1 Kg</option>
-                                          <option>2 Kg</option>
-                                          <option>3 Kg</option>
-                                          <option>4 Kg</option>
-                                          <option>5 Kg </option>
-                                        </select></p>
-                                        <div class="cart_quantity_button">
-                                            <a class="cart_quantity_up" href=""> Qty</a>
-                                        <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-                                            <!-- <a class="cart_quantity_down" href=""> - </a> -->
+                                                </p>
+                                                <div class="cart_quantity_button">
+                                                    <a class="cart_quantity_up" href=""> Qty</a>
+                                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                                    <!-- <a class="cart_quantity_down" href=""> - </a> -->
+                                                </div>
+                                                <a href="#" class="btn btn-default add-to-cart pull-right"><i class="fa fa-shopping-cart"></i>Add</a>
+                                            <% end %>
                                         </div>
-                                        <a href="#" class="btn btn-default add-to-cart pull-right"><i class="fa fa-shopping-cart"></i>Add</a>
+                                        
                                     </div>
-                                    
                                 </div>
                             </div>
-                        </div>
+                        <%end%>
+                    <%else%>
+                      <b> No Record Found </b>
                     <%end%>
 
                 <!-- <div class="tab-pane fade" id="blazers" >

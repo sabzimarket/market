@@ -3,7 +3,7 @@ class Product
   include Mongoid::Document
   include Mongoid::Alize
   field :title, type: String
-  field :descirption, type: String
+  field :description, type: String
 
   
 
